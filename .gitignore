@@ -1,2 +1,57 @@
-/venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+*.db-journal
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+*.secret
+config.json
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.iml
+
+# Pytest and coverage
+.coverage
+htmlcov/
+*.cover
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Temporary files
+*.swp
+*.swo
+.DS_Store
+
+# Large files
+*.h5
+*.joblib
+
 /data
