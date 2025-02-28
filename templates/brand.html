@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Select Car Brand{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/brand.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>CO₂ Emissions by Car Brand</h1>
+    <p>Below is a bar chart showing the average CO₂ emissions by car brand.</p>
+    <img src="{{ url_for('co2_bar_chart') }}" alt="CO2 Emissions by Brand Pie Chart" style="width: 80%; height: auto;">
+
+    <h1>CO2 Factors by Brand</h1>
+
+    <form action="/brand" method="POST">
+        <label for="brand">Choose a brand:</label>
+        <select name="brand" id="brand">
+            {% for brand in brands %}
+                <option value="{{ brand }}">{{ brand }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Show CO₂ Factors</button>
+    </form>
+
+    <img src="{{ image_url }}" alt="CO2 Emissions Chart">
+{% endblock %}

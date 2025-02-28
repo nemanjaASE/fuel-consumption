@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}CO₂ Emission Result{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Predicted CO₂ Emission</h2>
+        <p>The estimated CO₂emission for the given input is:</p>
+        <p class="result">{{ co2_emission | round(2) }} g/km</p>
+    </section>
+
+    <section class="actions">
+        <a href="{{ url_for('vehicle') }}" class="btn">Predict Again</a>
+        <a href="{{ url_for('home') }}" class="btn">Go to Home</a>
+    </section>
+{% endblock %}

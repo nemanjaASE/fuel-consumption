@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Cluster Result{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Economy of Vehicle</h2>
+        <p>The predicted cluster for the given input is:</p>
+        <p class="result">{{ category }}</p>
+    </section>
+
+    <section class="actions">
+        <a href="{{ url_for('economy') }}" class="btn">Check Economy Again</a>
+        <a href="{{ url_for('home') }}" class="btn">Go to Home</a>
+    </section>
+{% endblock %}

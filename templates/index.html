@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}CO₂ Emission Prediction{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <h2>Discover Your Vehicle's CO₂ Impact</h2>
+        <p>Gain valuable insights into your car's carbon footprint. Take control of your environmental impact with accurate emission predictions.</p>
+    </section>
+
+    <section class="cta-buttons">
+        <a href="{{ url_for('vehicle') }}" class="button primary">Calculate Emissions</a>
+        <a href="{{ url_for('economy') }}" class="button primary">Check Vehicle Economy</a>
+        <a href="{{ url_for('brand') }}" class="button secondary">Explore Data Trends</a>
+    </section>
+{% endblock %}
